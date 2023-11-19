@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#C9E5FF">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Your Booking" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="465dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="450dp"
+        android:background="#9ADBFF"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="22dp"
+            android:text="Date" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Time" />
+
+        <TextView
+            android:id="@+id/court"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Court" />
+
+        <TextView
+            android:id="@+id/level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Level" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Price" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="320dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="337dp"
+        android:layout_marginTop="350dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/cardNumber"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/rounded_edittext"
+            android:paddingLeft="20dp"
+            android:ems="10"
+            android:textSize="16dp"
+            android:inputType="number"
+            android:hint="Card Number"/>
+
+        <EditText
+            android:id="@+id/cardHolderName"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="18dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/rounded_edittext"
+            android:paddingLeft="20dp"
+            android:ems="10"
+            android:textSize="16dp"
+            android:inputType="text"
+            android:hint="Cardholder Name "/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/month"
+                android:layout_width="95dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_edittext"
+                android:paddingLeft="20dp"
+                android:ems="10"
+                android:textSize="12dp"
+                android:hint="Month"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/year"
+                android:layout_width="95dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_edittext"
+                android:paddingLeft="20dp"
+                android:ems="10"
+                android:textSize="12dp"
+                android:hint="Year"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/ccv"
+                android:layout_width="95dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_edittext"
+                android:paddingLeft="20dp"
+                android:ems="10"
+                android:textSize="12dp"
+                android:hint="CCV"
+                android:inputType="number" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/confirmPayment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="0dp"
+                android:textSize="16dp"
+                android:layout_weight="1"
+                android:backgroundTint="#0038FF"
+                android:text="Confirm Payment" />
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:textColor="#FF0000"
+                android:backgroundTint="@color/white"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menuBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@color/white"
+            android:scaleType="fitXY"
+            android:onClick="homePage"
+            app:srcCompat="@drawable/home_button" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@color/white"
+            android:scaleType="fitXY"
+            android:onClick="historyPage"
+            app:srcCompat="@drawable/clock" />
+
+        <ImageButton
+            android:id="@+id/imageButton4"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@color/white"
+            android:scaleType="fitXY"
+            android:onClick="editProfilePage"
+            app:srcCompat="@drawable/user2" />
+
+        <ImageButton
+            android:id="@+id/imageButton8"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@color/white"
+            android:scaleType="fitXY"
+            android:onClick="signInPage"
+            app:srcCompat="@drawable/log2" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
