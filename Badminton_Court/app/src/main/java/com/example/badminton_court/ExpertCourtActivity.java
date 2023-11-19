@@ -77,11 +77,20 @@ public class ExpertCourtActivity extends Fragment {
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                long result = dbManager.insertJoinCourt(courtId, courtHost, courtDate, courtTime, branch, court, userName, userEmail);
-                                if (result != -1) {
-                                    Toast.makeText(getActivity(),"Request sent!",Toast.LENGTH_SHORT).show();
-                                } else {
-                                    Toast.makeText(getActivity(),"Failed to send request",Toast.LENGTH_SHORT).show();
+                                boolean checkSameUser;
+
+                                checkSameUser = dbManager.checkSameUser(String.valueOf(user.getId()), courtId);
+
+                                if(checkSameUser == true){
+                                    Toast.makeText(getActivity(), "You cannot join your court", Toast.LENGTH_SHORT).show();
+                                }
+                                else {
+                                    long result = dbManager.insertJoinCourt(courtId, courtHost, courtDate, courtTime, branch, court, userName, userEmail);
+                                    if (result != -1) {
+                                        Toast.makeText(getActivity(), "Request sent!", Toast.LENGTH_SHORT).show();
+                                    } else {
+                                        Toast.makeText(getActivity(), "Failed to send request", Toast.LENGTH_SHORT).show();
+                                    }
                                 }
                             }
                         })

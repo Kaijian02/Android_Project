@@ -188,6 +188,7 @@
             android:layout_marginBottom="3dp"
             android:background="@color/white"
             android:scaleType="fitXY"
+            android:onClick="homePage"
             app:srcCompat="@drawable/home_button" />
 
         <ImageButton
@@ -199,6 +200,7 @@
             android:layout_marginBottom="3dp"
             android:background="@color/white"
             android:scaleType="fitXY"
+            android:onClick="historyPage"
             app:srcCompat="@drawable/clock" />
 
         <ImageButton
@@ -210,6 +212,7 @@
             android:layout_marginBottom="3dp"
             android:background="@color/white"
             android:scaleType="fitXY"
+            android:onClick="editProfilePage"
             app:srcCompat="@drawable/user2" />
 
         <ImageButton
